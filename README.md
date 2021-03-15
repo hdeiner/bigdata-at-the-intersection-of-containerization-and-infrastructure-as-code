@@ -1804,7 +1804,7 @@ We simply created an AWS S3 bucket called hadoop-scratchpad, ititialized Terrafo
 ![06_aws_hive_startup_01](assets/06_aws_hive_startup_01.png)
 Notice how, in the middle of this screenshot, how the aws_instance scripts are locally executing the "aws ec2 wait instance-status-ok" commands?  They're designed to keep us from jumping the gun and executing further provisioning until the EC2 instances are awake enough to respond to remote ssh and scp requests to response to them.
 ![06_aws_hive_startup_02](assets/06_aws_hive_startup_02.png)
-Jumping ahead in time a little (letting those EC2 instances to startup), we see what it looks like when the instances are establishing ssh credentials with us so we can provision them:
+Jumping ahead in time a little (letting those EC2 instances startup), we see what it looks like when the instances are establishing ssh credentials with us so we can provision them:
 ![06_aws_hive_startup_05](assets/06_aws_hive_startup_05.png)
 And now, we see what it looks like when the Terraform is sending files to the remote EC2 instances:
 ![06_aws_hive_startup_06](assets/06_aws_hive_startup_06.png)
