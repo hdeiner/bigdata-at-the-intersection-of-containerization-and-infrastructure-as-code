@@ -1,0 +1,18 @@
+<configuration>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>file:///hadoop-tmp</value>
+    </property>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://NAMENODE_DNS:9000</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.server.hosts</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.server.groups</name>
+        <value>*</value>
+    </property>
+</configuration>

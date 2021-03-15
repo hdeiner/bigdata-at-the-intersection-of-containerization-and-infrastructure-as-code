@@ -1,0 +1,34 @@
+# Eclipse
+*.project
+
+# IntelliJ
+.idea/
+*.iml
+
+# venv
+venv/
+
+# PyCharm
+.idea/
+
+# Mac
+.DS_Store
+
+# Bash
+*.swp
+
+# Maven
+log/
+target/
+.mvn
+dependency-reduced-pom.xml
+
+# Terraform
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+
+# GPG
+*.private.key
+*.public.key
+
