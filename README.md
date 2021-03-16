@@ -1800,7 +1800,7 @@ aws s3 mb s3://hadoop-scratchpad > /dev/null 2> /dev/null
 terraform init
 terraform apply -auto-approve
 ```
-We simply created an AWS S3 bucket called hadoop-scratchpad, ititialized Terraform, and applied the Terraform scripts.  Then the magic happens:
+We simply created an AWS S3 bucket called hadoop-scratchpad, initialized Terraform, and applied the Terraform scripts.  Then the magic happens:
 ![06_aws_hive_startup_01](assets/06_aws_hive_startup_01.png)
 Notice how, in the middle of this screenshot, how the aws_instance scripts are locally executing the "aws ec2 wait instance-status-ok" commands?  They're designed to keep us from jumping the gun and executing further provisioning until the EC2 instances are awake enough to respond to remote ssh and scp requests to response to them.
 ![06_aws_hive_startup_02](assets/06_aws_hive_startup_02.png)
