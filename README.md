@@ -1820,7 +1820,7 @@ A little further in time, we see a cyan message that HDFS is being started, and 
 ![06_aws_hive_startup_18](assets/06_aws_hive_startup_18.png)
 The final pieces of the metastore server, and then the hive server are executed (they have been patiently waiting for all other dependencies to get running), and we are done.
 ![06_aws_hive_startup_19](assets/06_aws_hive_startup_19.png)
-As it's final gesture to us, the terraform apply executes its output.tf, and shows us the DNS entries for the 8 EC2 instances it started for us.
+As its final gesture to us, the terraform apply executes its output.tf, and shows us the DNS entries for the 8 EC2 instances it started for us.
 ![06_aws_hive_startup_20](assets/06_aws_hive_startup_20.png)
 
 And just to get a sense of what the AWS provisioning looks like from the AWS console...
