@@ -214,7 +214,7 @@ while true ; do
 done
 rm stdout.txt stderr.txt
 ```
-Note that we want to keep any scripts from executing by waiting for Hive to idicate that it's starting.  But there always is some judgement call in all of this.
+Note that we want to keep any scripts from executing by waiting for Hive to indicate that it's starting.  But there always is some judgement call in all of this.
 
 What the console looks like:\
 ![02_containerized_hive_startup](assets/02_containerized_hive_startup.png)
