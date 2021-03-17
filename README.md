@@ -4,7 +4,7 @@
 
 This repository started out as a real world problem I faced recently.  Our group knew that it needed to start supporting Apache Hive on Hadoop Clusters.  Unhappily, they knew nothing about Hadoop nor Apache Hive.  
 
-One possibility was for people to start using the AWS Console and start creating AWS EMR (the Amazon managed cluster platform for supporting Hadoop, Map/Reduce, Apache Hive, etc.).
+One possibility was for people to start using the AWS Console and start creating AWS EMR (the Amazon managed cluster platform for supporting Hadoop, Map/Reduce, Apache Hive, etc.) instances.  What could go wrong?  Well, how about everything, even if the instructions were followed to a tee.
 
 I was very much against that idea, since we would not be learning anything, and would be reduced to mere users of a vendor-centric solution that would increase our cost of switching should we wish to change Cloud providers.
 
@@ -31,9 +31,9 @@ We need to keep our goal in mind.  Print it in big letters and paste it on the w
 To that end, we need to experience some of their issues so that we can empathize with their needs, wants, desires, and pains.
 
 <ol>
-<li>To begin, we need some data to work from.  Our users may be worried about exabytes or exabytes of data, but to get started, how about we start with known data in the gigabyte range?</li>
+<li>To begin, we need some data to work from.  Our users may be worried about petabytes or exabytes of data, but to get started, how about we start with known data in the gigabyte range?</li>
 <li>Then, we'll have to worry about data cleansing, so the data we import into our dataset can be used easily, without issue for import or querying against.</li>
-<li>Next, it would be nice to start using conatinerization, to allow us to quickly "install" the components to our local machines and test out what we will be doing when we gain enough experience to issue commands for things like importing and querying the data, as well as monitoring the components like Hadoop and Hive.  I choose to use Docker for this, because we don't have to install to our systems.  We use Docker Containers to create environments on demand, and installlaion and modification doesn't affect our host environments.</li>
+<li>Next, it would be nice to start using conatinerization, to allow us to quickly "install" the components to our local machines and test out what we will be doing.  There, we can we gain enough experience to issue commands for things like importing and querying the data, as well as monitoring the components like Hadoop and Hive.  I choose to use Docker for this, because we don't have to install to our systems.  We use Docker Containers to create environments on demand, and installlaion and modification doesn't affect our host environments.</li>
 <li>When we're comfortable that we understand the components and how they work together, we can then use Infrastruture as Code to create the scripts that permit us to create, provision, and test the installations in our ultimate Cloud environments.</li>
 </ol>
 
