@@ -554,7 +554,7 @@ Two things of note here.
 <LI>I am using AWS S3 to hold some endpoint configuration data, such as the endpoints of datanodes for configuration across EC2 instances.  I definately would argue that some better form of instance registration should be used (I prefer Vault).  But again, I didn't want to overly complicate this presentation and focus on other aspects, given our time constraints.</LI>
 </UL>
 
-This example will create an Apache Hive environment with 4 HADOOP datanodes, 1 HADOOP namenode, 1 Hive RDBMS server, 1 Hive Hive Metastore server, and 1 Hive Server.
+This example will create an Apache Hive environment with 4 HADOOP datanodes, 1 HADOOP namenode, 1 Hive RDBMS server, 1 Hive Metastore server, and 1 Hive Server.
 
 So, where do we get started with Terraform?  Probably the best place to start is with how to tell Terraform which cloud provider to work with, and how to authenticate with them?  That's the job of my terraform.provider.tf file.
 ```terraform
