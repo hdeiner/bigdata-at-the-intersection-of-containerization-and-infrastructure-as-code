@@ -60,7 +60,7 @@ For example, you have embedded commas in that quoted data, as in:
 There are also issues with converting the dates in the csv data into valid TIMESTAMP dates for Apache Hive and metastore database used for Apache Hive (I will be using Postgresql for metadata storage).  So, the normal processing on csv import can't be done.  Here's an example of that issue:
 ![01_example_raw_data_csv_issue_2](assets/01_example_raw_data_csv_issue_2.png)
 
-So, I decided to write the Python program create_PGYR2019_P06302020_csv_data.py to handle
+So, I decided to write the Python program 01_create_PGYR2019_P06302020_csv_data.py to handle
 <UL>
 <LI>Downloading the dataset to a /tmp location</LI>
 <LI>Unzipping the downloaded dataset</LI>
