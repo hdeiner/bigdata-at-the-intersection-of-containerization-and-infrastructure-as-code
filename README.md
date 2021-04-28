@@ -1837,7 +1837,7 @@ A little time passes, and the scripts are hot and heavy into provisioning...
 Performance graphs of NAMENODE at this time...
 ![06_aws_hive_startup_aws_console_03](assets/06_aws_hive_startup_aws_console_03.png)
 
-Well, just getting back a good looking console log doesn't give us that much assurance that everything is fine on all those pieces we provisioned.  We had a smoke test for the docker version of this project.  Let's take the relevant sections of that and put them into a form that we can upload to the EC2 instance for the HADOOP namenode and do our smoke test for map/reduce on our AWS EC2 HADOOP cluster.
+Well, just getting back a good looking console log doesn't give us that much assurance that everything is fine on all those pieces we provisioned.  We had a smoke test for the docker version of this project.  Let's take the relevant sections of that and put them into a form that we can upload to the EC2 instance for the HADOOP namenode and do our smoke test for map/reduce on our AWS EC2 HADOOP cluster.  That's what 07_aws_hadoop_smoke_test.sh is all about.
 ```bash
 #!/usr/bin/env bash
 
@@ -1938,7 +1938,7 @@ And, about that map/reduce job we ran...
 ![07_aws_hadoop_smoke_tests_aws_console_05](assets/07_aws_hadoop_smoke_tests_aws_console_05.png)
 ![07_aws_hadoop_smoke_tests_aws_console_06](assets/07_aws_hadoop_smoke_tests_aws_console_06.png)
 
-It's a similar story for testing Hive itself.  We already worked out the details of how to run this test in the Docker environment, we now simply put together an AWS Hive test script and run it.
+It's a similar story for testing Hive itself.  We already worked out the details of how to run this test in the Docker environment, we now simply put together an AWS Hive test script and run it.  That's called 08_aws_hive_test.sh.
 ```bash
 #!/usr/bin/env bash
 
@@ -2021,7 +2021,7 @@ Performance graphs of HIVESERVER after running these tests...
 
 As you can see from just the CPU and network charts, we kept that instance quite busy during our stay.  This might also be the place where you want to look when you start optimizing the attributes associated with tuning the environment.  Because we made the tests so repeatable, this now becomes an oppurtunity ro actually treat the tuning as a scientific experiment, so we can see the effects of tweeking one or two parameters at a time and observing the effects.
 
-Now that we've accomplished our goals for the project, it's time to stop the AWS charges from continuing.  The script for that is so easy that's it's comical.
+Now that we've accomplished our goals for the project, it's time to stop the AWS charges from continuing.  The script for that is so easy that's it's comical.  Meet 09_aws_hive_shutdown.sh.
 ```bash
 #!/usr/bin/env bash
 echo "$(tput bold)$(tput setaf 6)Shutdown Apache Hive AWS$(tput sgr 0)"
